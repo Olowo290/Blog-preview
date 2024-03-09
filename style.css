@@ -1,69 +1,90 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: hsl(47, 88%, 63%);
-}
-.sub-container{
-    background-color: hsl(0, 0%, 100%);
-    border-radius: 10px;
-    max-width: 330px;
-    position: relative;
-padding: 20px;
-}
-.sub-container::after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: hsl(0, 0%, 7%);
-    position: absolute;
-    right: -10px;
-    top: 0;
-    z-index: -1;
+html {
+  font-size: 10px;
 }
 
-
-.sub-container > img{
-    width: 100%;
-    border-radius: 10px;
-}
-button{
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: hsl(47, 88%, 63%);
-    padding: 5px;
-    border-radius: 5px;
-    border-color: transparent ;
-}
-h3{
-    margin-top: 15px;
-    font-weight: bold;
-}
-.fade{
-    color: hsl(0, 0%, 50%);
-    width: 80%;
-    line-height: 1.3;
-    margin-top: 15px;
-}
-.profile{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 15px;
-}
-.profile > img{
-    width: 50px;
+body {
+  background-color: hsl(47, 88%, 63%);
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 100px);
+}
+.container article.sub-container {
+  background-color: hsl(0, 0%, 100%);
+  max-width: 360px;
+  padding: 1em;
+  border: 1px solid hsl(0, 0%, 7%);
+  border-radius: 10px;
+  position: relative;
+}
+.container article.sub-container p:first-of-type,
+.container article.sub-container h3 {
+  color: hsl(0, 0%, 7%);
+  margin-top: 0.3em;
+}
+.container article.sub-container p:not(:first-of-type) {
+  color: hsl(0, 0%, 50%);
+  font-size: 2rem;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
+.container article.sub-container img:not(.avatar) {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.5em;
+}
+.container article.sub-container button {
+  background-color: hsl(47, 88%, 63%);
+  border: none;
+  outline: none;
+  color: hsl(0, 0%, 7%);
+  font-size: 1.7rem;
+  padding: 0.3em 0.4em;
+  border-radius: 5px;
+}
+.container article.sub-container .pub {
+  font-size: 1.5em;
+}
+.container article.sub-container h3 {
+  font-size: 2rem;
+}
+.container article.sub-container .profile {
+  display: flex;
+  gap: 0.6em;
+  align-items: center;
+}
+.container article.sub-container .profile p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.container article.sub-container ::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: hsl(0, 0%, 7%);
+  top: 10px;
+  right: -10px;
+  position: absolute;
+  border-radius: 10px;
+  z-index: -2;
+}
 
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  text-align: center;
+  font-size: 1.5rem;
+}
+.attribution a {
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  background-color: #ebbb0f;
+  padding: 0.3em;
+}/*# sourceMappingURL=style.css.map */
